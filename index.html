@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forecaster - See today's weather</title>
+    <meta name="description" content="Find your local weather along with weather from thousands of places around the world. Powered by the OpenWeatherMap API.">
+    <meta name="keywords" content="weather, local, search, javascript, openweather, api">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cerulean - See Today's Weather</title>
 </head>
 <body>
+    <h1 id="title">Cerulean - A Simple Weather App</h1>
+
+    <section class="search">
+        <input id="input" type="text" maxlength="50" placeholder="Type in city name...">
+        <button id="submit">Check Weather</button>
+    </section>
+
     <section class="app">
-        <button id="button">Weather</button>
+        <div class="left">
+            <div class="icon">
+                <img id="w-icon" src="" alt="">
+            </div>
+            <div class="temp">
+                <p id="city-temp">53 F</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="location">
+                <p id="city-country">Hayward, US</p>
+            </div>
+            <div class="description">
+                <p id="desc">Description: Clear and sunny.</p>
+            </div>
+            <div class="humidity-wind">
+                <div class="humidity">
+                    <p id="humid">Humidity: 25%</p>
+                </div>
+                <div class="wind-speed">
+                    <p id="w-speed">Wind Speed: 8.75 mph</p>
+                </div>
+            </div>
+            <div class="cloudiness">
+                <p id="cloud-percent">Cloudiness: 0%</p>
+            </div>
+            <div class="coordinates">
+                <p id="lat">Latitude: 37.2</p>
+                <p id="lon">Longitude: -122.8</p>
+            </div>
+        </div>
     </section>
 
     <script src="weather.js"></script>

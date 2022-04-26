@@ -63,6 +63,7 @@ p {
     justify-content: space-evenly;
     border-radius: 8px;
     color: rgb(82, 79, 79);
+    visibility: hidden;
 }
 
 .left,

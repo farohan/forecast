@@ -49,6 +49,8 @@ function fetchWeather() {
             allParagraphs[6].innerHTML = `Visibility: About ${Math.floor(fetchedData[7] / 1609)} mile(s)`;
             allParagraphs[7].innerHTML = `Latitude: ${fetchedData[8]}`;
             allParagraphs[8].innerHTML = `Longitude: ${fetchedData[9]}`;
+        
+            application.style.visibility = 'visible';
     });
 }
 

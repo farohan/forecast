@@ -7,10 +7,10 @@
     <meta name="description" content="Find your local weather along with weather from thousands of places around the world. Powered by the OpenWeatherMap API.">
     <meta name="keywords" content="weather, local, search, javascript, openweather, api">
     <link rel="stylesheet" href="styles.css">
-    <title>Cerulean - See Today's Weather</title>
+    <title>See Today's Weather</title>
 </head>
 <body>
-    <h1 id="title">Cerulean - A Simple Weather App</h1>
+    <h1 id="title">A Simple Weather App</h1>
 
     <section class="search">
         <input id="input" type="text" maxlength="50" placeholder="Type in city name...">
@@ -23,30 +23,33 @@
                 <img id="w-icon" src="" alt="">
             </div>
             <div class="temp">
-                <p id="city-temp">53 F</p>
+                <p id="city-temp"></p>
             </div>
         </div>
         <div class="right">
             <div class="location">
-                <p id="city-country">Hayward, US</p>
+                <p id="city-country"></p>
             </div>
             <div class="description">
-                <p id="desc">Description: Clear and sunny.</p>
+                <p id="desc"></p>
             </div>
             <div class="humidity-wind">
                 <div class="humidity">
-                    <p id="humid">Humidity: 25%</p>
+                    <p id="humid"></p>
                 </div>
                 <div class="wind-speed">
-                    <p id="w-speed">Wind Speed: 8.75 mph</p>
+                    <p id="w-speed"></p>
                 </div>
             </div>
             <div class="cloudiness">
-                <p id="cloud-percent">Cloudiness: 0%</p>
+                <p id="cloud-percent"></p>
+            </div>
+            <div class="visibility">
+                <p id="visible"></p>
             </div>
             <div class="coordinates">
-                <p id="lat">Latitude: 37.2</p>
-                <p id="lon">Longitude: -122.8</p>
+                <p id="lat"></p>
+                <p id="lon"></p>
             </div>
         </div>
     </section>

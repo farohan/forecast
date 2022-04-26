@@ -1,3 +1,3 @@
 # Weather App
 
-Link to Weather App: https://farohan.github.io/forecast/
+Link to Weather App: https://farohan.github.io/weather/

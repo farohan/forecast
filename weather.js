@@ -40,7 +40,7 @@ function fetchWeather() {
                 document.querySelector('#lon')
             ];
 
-            allParagraphs[0].innerHTML = `${Math.floor(1.8 * (fetchedData[0] - 273) + 32)}°F`;
+            allParagraphs[0].innerHTML = `Feels Like <strong>${Math.floor(1.8 * (fetchedData[0] - 273) + 32)}°F</strong>`;
             allParagraphs[1].innerHTML = `${fetchedData[1]}, ${fetchedData[2]}`;
             allParagraphs[2].innerHTML = `Description: ${fetchedData[3]}.`;
             allParagraphs[3].innerHTML = `Humidity: ${fetchedData[4]}%`;

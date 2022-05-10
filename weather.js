@@ -1,3 +1,6 @@
+//Welcome to weather.js!
+
+//Grabbing the input + the city
 const searchbar = document.getElementById('input');
 const submit = document.getElementById('submit');
 
@@ -9,11 +12,15 @@ function getCity() {
     fetchWeather();
 }
 
-//Selecting the application box & the icon
+//Selecting the application box, the icon, & the response-time paragraph
 const icon = document.getElementById('w-icon');
 const application = document.querySelector('.app');
+const resTime = document.querySelector('#res-time');
 
 function fetchWeather() {
+    let start = Date.now();
+
+    //The API key and final URL
     const apiKey = '515f3fa5d2503494452e23251073518b';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`;
 
@@ -21,7 +28,7 @@ function fetchWeather() {
         .then((response) => {
             return response.json();
         }).then((data) => {
-            icon.src = `https://api.openweathermap.org/img/w/${data.weather[0].icon}`;
+            icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
             icon.alt = 'weather icon';
 
             console.log(data);
@@ -40,7 +47,7 @@ function fetchWeather() {
                 document.querySelector('#lon')
             ];
 
-            allParagraphs[0].innerHTML = `Feels Like <strong>${Math.floor(1.8 * (fetchedData[0] - 273) + 32)}°F</strong>`;
+            allParagraphs[0].innerHTML = `Feels Like <strong> ${Math.floor(1.8 * (fetchedData[0] - 273) + 32)}°F </strong>`;
             allParagraphs[1].innerHTML = `${fetchedData[1]}, ${fetchedData[2]}`;
             allParagraphs[2].innerHTML = `Description: ${fetchedData[3]}.`;
             allParagraphs[3].innerHTML = `Humidity: ${fetchedData[4]}%`;
@@ -49,8 +56,14 @@ function fetchWeather() {
             allParagraphs[6].innerHTML = `Visibility: About ${Math.floor(fetchedData[7] / 1609)} mile(s)`;
             allParagraphs[7].innerHTML = `Latitude: ${fetchedData[8]}`;
             allParagraphs[8].innerHTML = `Longitude: ${fetchedData[9]}`;
-        
+
             application.style.visibility = 'visible';
+
+            let finish = Date.now();
+            const responseTime = `${(finish - start) / 1000} seconds`;
+
+            resTime.innerHTML = `Response Time: ${responseTime}`;
+            resTime.style.visibility = 'visible';
     });
 }
 

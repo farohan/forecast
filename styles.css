@@ -89,3 +89,9 @@ p {
     width: 25rem;
     object-fit: cover;
 }
+
+#res-time {
+    font-size: 1.75rem;
+    text-align: center;
+    visibility: hidden;
+}
